@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Agricare-Fertilizer Prediction</title>
+    <link rel="icon" href="Images\logo.png" sizes="32x32" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static './login-style.css' %}"
+    />
+  </head>
+
+  <body>
+    <div class="main">
+      <a href="{% url 'home'%}"
+        ><img style="width: 300px" src="{% static './Images/banner.png'%}" /></a
+      ><br /><br />
+      <form class="login" action="{% url 'answer' %}" method="post">
+        {% csrf_token %}
+        <input
+          type="number"
+          class="input"
+          placeholder="Calcium Content"
+          name="ca"
+          step="0.001"
+          required
+        /><br />
+        <input
+          type="number"
+          class="input"
+          placeholder="Magnesium Content"
+          name="mg"
+          step="0.001"
+          required
+        /><br />
+        <input
+          type="number"
+          class="input"
+          placeholder="Potassium Content"
+          name="k"
+          step="0.001"
+          required
+        /><br />
+        <input
+          type="number"
+          class="input"
+          placeholder="Sulphur Content"
+          name="s"
+          step="0.001"
+          required
+        /><br />
+        <input
+          type="number"
+          class="input"
+          placeholder="Nitrogen Content"
+          name="n"
+          step="0.001"
+          required
+        /><br />
+        <input
+          type="number"
+          class="input"
+          placeholder="Lime Content"
+          name="lime"
+          step="0.001"
+          required
+        /><br />
+        <input
+          type="number"
+          class="input"
+          placeholder="Carbon Content"
+          name="c"
+          step="0.001"
+          required
+        /><br />
+        <input
+          type="number"
+          class="input"
+          placeholder="Phosphorous Content"
+          name="p"
+          step="0.001"
+          required
+        /><br />
+        <input
+          type="number"
+          class="input"
+          placeholder="Moisture"
+          name="moisture"
+          step="0.001"
+          required
+        /><br />
+        <button class="button">Predict</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+
+body {
+  margin-left: 4%;
+  overflow-x: none;
+}
+
+h1 {
+  color: grey;
+  font-family: "Courier New", monospace;
+}
+
+.node {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  display: inline-block;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.child {
+  display: inline-block;
+  width: 50%;
+  float: left;
+}
+
+.subchild1 {
+  display: inline-block;
+}
+
+.illustration {
+  max-width: 100%;
+  padding-top: 10%;
+}
+.mbutton {
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 0.5% 60%;
+  cursor: pointer;
+  border: 1px solid #34c464;
+  width: 35%;
+  background-color: #34c464;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.button {
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 6px 8px;
+  cursor: pointer;
+  border: 1px solid #34c464;
+  width: 35%;
+  background-color: #34c464;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.button:hover,
+.mbutton:hover {
+  background-color: white;
+  color: #34c464;
+  border: 1px solid #34c464;
+}
+
+.subhead {
+  text-align: center;
+  padding: 8px;
+  height: 100px;
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.text {
+  padding: 8px;
+  font-size: 100%;
+}

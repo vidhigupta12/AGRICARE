@@ -1,0 +1,21 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static './login-style.css' %}"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <a href="{% url 'home'%}"
+        ><img
+          style="width: 300px"
+          src="{% static './Images/banner.png' %}" /></a
+      ><br /><br />
+      <span class="pr">The recommended fertilizer is of class <b>{{ans}}</b></span>
+    </div>
+  </body>
+</html>

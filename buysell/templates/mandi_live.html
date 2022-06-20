@@ -1,0 +1,56 @@
+{% load render_table from django_tables2 %} {%load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static './login-style.css' %}"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <a href="{% url 'home'%}"
+        ><img
+          style="width: 300px"
+          src="{% static './Images/banner.png' %}" /></a
+      ><br /><br />
+      <table>
+        <tr>
+          <th>STATE</th>
+          <th>DISTRICT</th>
+          <th>MARKET</th>
+          <th>COMMODITY</th>
+          <th>VARIETY</th>
+          <th>ARRIVAL_DATE</th>
+          <th>MIN_PRICE</th>
+          <th>MAX_PRICE</th>
+          <th>MODAL_PRICE</th>
+        </tr>
+        {% for i in response %}
+        <tr>
+          <td>{{ i.state }}</td>
+          <td>{{ i.district }}</td>
+          <td>{{ i.market }}</td>
+          <td>{{ i.commodity }}</td>
+          <td>{{ i.variety }}</td>
+          <td>{{ i.arrival_date }}</td>
+          <td>{{ i.min_price }}</td>
+          <td>{{ i.max_price }}</td>
+          <td>{{ i.modal_price }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      <br />
+      {% if response.has_previous %}
+      <a href="?page=1">&laquo First</a>
+      <a href="?page={{response.previous_page_number}}">Previous</a>
+      {% endif %} Page {{ response.number }} of {{response.paginator.num_pages}}
+      {% if response.has_next %}
+      <a href="?page={{response.next_page_number}}">Next</a>
+      <a href="?page={{venues.paginator.num_pages}}">Last &raquo</a>
+      {% endif %}
+      <br /><br />
+    </div>
+  </body>
+</html>

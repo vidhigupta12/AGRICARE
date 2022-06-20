@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Agricare</title>
+    <link rel="icon" sizes="32x32" href="{% static './Images/logo.png' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static './style.css' %}" />
+  </head>
+  <header>
+    <div class="brand">
+      <img style="width: 280px" src="{% static './Images/banner.png' %}" />
+    </div>
+    <a href="mandi" target="_self"
+      ><input type="button" class="mbutton" value="Mandi Prices »"
+    /></a>
+  </header>
+  <body>
+    <div class="node">
+      <div class="child">
+        <h1>Modern Agriculture<br />marketplace for everyone.<br /><br /></h1>
+        <div class="subchild">
+          <span class="subhead">Sell your Crops<br /></span>
+          <span class="text">Upscale your farming business with us.<br /></span
+          ><br />
+          <a href="sell" target="_self"
+            ><input type="button" class="button" value="Sell »"
+          /></a>
+        </div>
+        <br /><br />
+        <div class="subchild">
+          <span class="subhead">Quote your best price<br /></span>
+          <span class="text">List your price in our database.<br /></span><br />
+          <a href="list" target="_self"
+            ><input type="button" class="button" value="List Now »"
+          /></a>
+        </div>
+        <br /><br />
+        <div class="subchild">
+          <span class="subhead">Crop Recommendation<br /></span>
+          <span class="text"
+            >Get to know the best suitable crop for you.<br /></span
+          ><br />
+          <a href="recommend" target="_self"
+            ><input type="button" class="button" value="Get Recommendations »"
+          /></a>
+        </div>
+        <br /><br />
+        <div class="subchild">
+          <span class="subhead">Fertilizer Prediction<br /></span>
+          <span class="text"
+            >Predict perfect fertilizer for your crop field<br /></span
+          ><br />
+          <a href="predict" target="_self"
+            ><input type="button" class="button" value="Get Predictions »"
+          /></a>
+        </div>
+        <br /><br />
+        <p>Copyright © 2021 Agricare</p>
+      </div>
+      <div class="child">
+        <img
+          src="{% static './Images/illustration.jpg' %}"
+          class="illustration"
+        />
+      </div>
+    </div>
+  </body>
+</html>

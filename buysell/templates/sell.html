@@ -1,0 +1,22 @@
+{# buysell/templates/sell.html #} {% load render_table from django_tables2 %}
+{%load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static './login-style.css' %}"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <a href="{% url 'home'%}"
+        ><img
+          style="width: 300px"
+          src="{% static './Images/banner.png' %}" /></a
+      ><br /><br />
+      {% render_table obj %}
+    </div>
+  </body>
+</html>
